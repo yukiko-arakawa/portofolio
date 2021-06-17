@@ -1,0 +1,366 @@
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;  
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+*,*::before,*::after{
+  box-sizing: border-box;
+}
+.wrapper{
+    background-image:url(img/dot.png);
+}
+.logo-wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+.logo-wrapper p{
+    border: 1px solid rgb(192, 190, 190);
+    border-radius: 10px;
+    font-size: 45px;
+    font-weight: bold;
+    padding: 0 40px;
+    margin-top: 60px;
+    margin-left: 80px;
+    height: 70px;
+
+}
+.logo-wrapper img{
+  width: 50px;
+  height: 50px;
+  padding-top: 5px;
+  margin-bottom: -5px;
+  margin-left: 20px;
+}
+.logo-wrapper a{
+  float: right;
+  padding-top: 70px;
+  padding-right: 140px;
+}
+.logo-wrapper a img{
+    width: 50px;
+  height: 50px;
+}
+
+ nav ul{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 80px;
+    margin-right: 100px;
+}
+nav ul a{
+    color: #707070;
+    margin-right: 40px;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: Meiryo;
+}
+nav ul a:hover{
+    text-decoration: underline;
+}
+
+/* ハンバーガーメニュー */
+    label{
+        margin-left: 30px;
+    }
+　.menu-btn{
+        position: relative;
+        display: flex;
+        align-items: center;
+        margin-bottom: -20px;
+        font-weight: bold;
+        margin-left: 20px;
+  }
+  .menu-btn span,
+  .menu-btn span:before,
+  .menu-btn span:after{
+      content: '';
+      display: block;
+      height: 2px;
+      width: 30px;
+      border-radius: 3px;
+      background-color: #555555;
+      position: absolute;
+  }
+  .menu-btn span:before{
+      bottom: 10px;
+  }
+  .menu-btn span:after{
+      top: 10px;
+  }
+  #check:checked ~ .menu-btn span{
+      background-color: white;
+  }
+  #check:checked ~ .menu-btn span::before{
+    bottom: 0;
+    transform: rotate(45deg);
+  }
+  #check:checked ~ .menu-btn span::after{
+      top: 0;
+      transform: rotate(-45deg);
+  }
+  #check{
+      display: none;
+  }
+  .sp-nav{
+      visibility: hidden;
+      height: 0;
+      transition: 0.5s;
+      opacity: 0;
+  }
+  .sp-nav li{
+      margin-top: 10px;
+      text-align: center;
+  }
+  .sp-nav a{
+      text-decoration: none;
+      color: black;
+      font-size: 20px;
+  }
+  .sp-nav a:hover{
+      text-decoration: underline;
+  }
+  #check:checked~.sp-nav{
+      visibility: visible;
+      transition: 0.5s;
+      height: 120px;
+      opacity: 1;
+  }
+/* ハンバーガーメニュー */
+.top-img {
+    margin-top: 60px;
+    margin-bottom: 100px;
+}
+.top-img img{
+    height: 480px;
+    width:  100%;
+    object-fit: cover;
+}
+.heading{
+    text-align: center;
+    font-size: 35px;
+    font-weight: 600;
+}
+.profile{
+    display: flex;;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 150px;
+}
+.profile img{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    margin-right: 40px;
+    object-fit: cover;
+}
+.profile p{
+    font-size: 20px;
+    color: #707070;
+    line-height: 1.5;
+}
+.service{
+    display: flex;
+    height: auto;
+    justify-content: space-around;
+    align-items: center;
+    margin: 55px 4% 150px 4%;
+}
+.container{
+    height: auto;
+    font-family: 游ゴシック体;
+    color: #707070;
+}
+.container h2{
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.container img{
+    width: 160px;
+    height: 160px;
+    margin-bottom: 15px;
+}
+#design{
+    padding-top: 35px;
+}
+#design h2{
+    padding-right: 20px;
+}
+.service-wrapper .pink{
+    margin-left: 20px;
+}
+.container p{
+    font-size: 18px;
+}
+.works-wrapper{
+    margin: 0 10% 160px 10%;
+}
+.works{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 80px;
+}
+.works-wrapper a{
+    display: block;
+    width: 30%;
+    height: 260px;
+    border: 1px solid rgb(150, 144, 144);
+    box-shadow: 3px 3px 8px lightgray;
+    
+}
+.works-wrapper a:hover{
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.works img{
+   width: 100%;
+   height: 100%;
+}
+.contact-wrapper{
+    margin: 0 10%;
+}
+.contact-wrapper .heading{
+    margin-bottom: 70px;
+}
+form div{
+    margin-bottom: 45px;
+}
+label{
+    font-size: 20px;
+    color: #707070;
+    margin-bottom: 35px;
+    display: block;
+}
+input[type="text"],
+input[type="email"],
+textarea{
+    border: 1px#707070 solid;
+    border-radius: 5px;
+    width: 100%;
+}
+input[type="text"],
+input[type="email"]{
+    height: 50px;
+    font-size: 25px;
+}
+textarea{
+    height: 280px;
+    font-size: 30px;
+}
+input[type="submit"]{
+  border: none;
+  cursor: pointer;
+  width: 500px;
+  height: 90px;
+  font-size: 25px;
+  background-color: #2C87D6;
+  color: white;
+  border-radius: 5px;
+}
+.contact-wrapper p{
+    text-align: center;
+}
+footer{
+    display: flex;
+    justify-content: space-between;
+    margin: 50px 130px 100px 130px;
+}
+footer a img{
+    width: 50px;
+    height: 50px;
+    margin-top: 55px;
+    margin-left: -150px;
+}
+
