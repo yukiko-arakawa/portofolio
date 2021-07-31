@@ -95,9 +95,6 @@ input, select {
 *,*::before,*::after{
   box-sizing: border-box;
 }
-.wrapper{
-    background-image:url(img/dot.png);
-}
 .logo-wrapper{
     display: flex;
     justify-content: space-between;
@@ -136,14 +133,27 @@ input, select {
     margin-right: 100px;
 }
 nav ul a{
+    position: relative;
     color: #707070;
     margin-right: 40px;
     text-decoration: none;
     font-size: 20px;
     font-family: Meiryo;
 }
-nav ul a:hover{
-    text-decoration: underline;
+nav  ul a::after{
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: rgb(139, 138, 139);
+    transform: scale(0, 1);
+    transform-origin: left top;
+    transition: transform .3s;
+}
+nav ul a:hover::after{
+    transform: scale(1, 1);
 }
 
 /* ハンバーガーメニュー */
@@ -214,6 +224,7 @@ nav ul a:hover{
       opacity: 1;
   }
 /* ハンバーガーメニュー */
+
 .top-img {
     margin-top: 60px;
     margin-bottom: 100px;
@@ -222,11 +233,22 @@ nav ul a:hover{
     height: 480px;
     width:  100%;
     object-fit: cover;
+    opacity: 0.9;
 }
 .heading{
     text-align: center;
     font-size: 35px;
     font-weight: 600;
+}
+.sentence{
+    color: rgb(0, 0, 0);
+    font-family: fantasy;
+    text-align: center;
+    margin:0 6% 120px;
+    font-size: 20px;
+}
+.sentence .what{
+    font-size: 24px;
 }
 .profile{
     display: flex;;
@@ -287,7 +309,7 @@ nav ul a:hover{
 .works-wrapper a{
     display: block;
     width: 30%;
-    height: 260px;
+    height: 220px;
     border: 1px solid rgb(150, 144, 144);
     box-shadow: 3px 3px 8px lightgray;
     
@@ -302,6 +324,26 @@ nav ul a:hover{
    width: 100%;
    height: 100%;
 }
+
+.works .woman:hover{
+    opacity: 1;
+}
+.price-wrapper  table{
+   margin: 50px auto 120px; 
+   width: 60%;
+}
+.price-wrapper tr{
+    display: flex;
+    justify-content: space-between;
+   margin-bottom: 30px;
+   border-bottom: 1px solid black;
+   font-size: 20px;
+}
+.price-wrapper strong{
+    font-size: 24px;
+    font-weight: 500;
+}
+
 .contact-wrapper{
     margin: 0 10%;
 }
@@ -354,7 +396,49 @@ footer{
 footer a img{
     width: 50px;
     height: 50px;
-    margin-top: 55px;
+    margin-top: 25px;
     margin-left: -150px;
 }
+.page-top {
+    /* buttonタグのリセットCSS */
+    border: none;
+    cursor: pointer;
+    outline: none;
+    padding: 0;
+    appearance: none;
+  
+    /* ボタンの装飾 */
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    z-index: 100;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #391e88;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    opacity: 0;
+  }
+  
+  /* 矢印のスタイル */
+  .page-top::before {
+    content: "";
+    width: 12px;
+    height: 12px;
+    margin-bottom: -6px;
+    border-top: solid 3px #fff;
+    border-right: solid 3px #fff;
+    transform: rotate(-45deg);
+  }
+  
+  /* ホバー時のスタイル */
+  .page-top:hover {
+    transform: scale(1.1);
+  }
+  .top-btn{
+      opacity: 1;
+  }
 
