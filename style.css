@@ -157,72 +157,44 @@ nav ul a:hover::after{
 }
 
 /* ハンバーガーメニュー */
-    label{
-        margin-left: 30px;
-    }
-　.menu-btn{
-        position: relative;
-        display: flex;
-        align-items: center;
-        margin-bottom: -20px;
-        font-weight: bold;
-        margin-left: 20px;
-  }
-  .menu-btn span,
-  .menu-btn span:before,
-  .menu-btn span:after{
-      content: '';
-      display: block;
-      height: 2px;
-      width: 30px;
-      border-radius: 3px;
-      background-color: #555555;
-      position: absolute;
-  }
-  .menu-btn span:before{
-      bottom: 10px;
-  }
-  .menu-btn span:after{
-      top: 10px;
-  }
-  #check:checked ~ .menu-btn span{
-      background-color: white;
-  }
-  #check:checked ~ .menu-btn span::before{
-    bottom: 0;
-    transform: rotate(45deg);
-  }
-  #check:checked ~ .menu-btn span::after{
-      top: 0;
-      transform: rotate(-45deg);
-  }
-  #check{
-      display: none;
-  }
-  .sp-nav{
-      visibility: hidden;
-      height: 0;
-      transition: 0.5s;
-      opacity: 0;
-  }
-  .sp-nav li{
-      margin-top: 10px;
-      text-align: center;
-  }
-  .sp-nav a{
-      text-decoration: none;
-      color: black;
-      font-size: 20px;
-  }
-  .sp-nav a:hover{
-      text-decoration: underline;
-  }
-  #check:checked~.sp-nav{
-      visibility: visible;
-      transition: 0.5s;
-      height: 120px;
-      opacity: 1;
-  }
+.sp-nav a {
+    color:black;
+    text-decoration: none; }
+  .sp-nav ul {
+    flex-direction: column; 
+    margin-right: -20px;
+    margin-top: 0;
+}
+  .sp-nav li {
+    margin: 1rem 0; }
+  .sp-nav .btn-menu {
+    position: relative;
+    float: right;
+    border: 1px solid #999;
+    background: transparent;
+    color:rgb(100, 98, 98);
+    padding: .3rem;
+    margin-top: -50px;
+    margin-right: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    line-height: 1; }
+  .sp-nav .sp {
+    background-color: rgb(226, 251, 255);
+    position: absolute;
+    z-index: 1;
+    top: 130px;
+    right: 0;
+    overflow: hidden;
+    text-align: center;
+    padding: 30px 0;
+    width: 0;
+    -webkit-transition: 0.5s;
+    transition: 0.5s; }
+  .sp-nav .sp.open-menu {
+    width: 100%; } 
+  
+
 /* ハンバーガーメニュー */
 
 .top-img {
@@ -255,20 +227,22 @@ nav ul a:hover::after{
     height: auto;
     justify-content: center;
     align-items: center;
-    margin-top: 10px;
+    margin-top: 30px;
     margin-bottom: 150px;
 }
 .profile img{
     width: 300px;
     height: 300px;
     border-radius: 50%;
-    margin-right: 40px;
+    margin-right: 10px;
     object-fit: cover;
 }
 .profile p{
-    font-size: 20px;
+    font-size: 18px;
     color: #707070;
     line-height: 1.5;
+    background-color:#ecf2f8;
+    padding: 20px;
 }
 .service{
     display: flex;
@@ -391,7 +365,7 @@ input[type="submit"]{
 footer{
     display: flex;
     justify-content: space-between;
-    margin: 50px 130px 100px 130px;
+    margin: 0px 130px 100px 130px;
 }
 footer a img{
     width: 50px;
@@ -415,7 +389,7 @@ footer a img{
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background-color: #391e88;
+    background: linear-gradient(to right, rgb(0, 110, 255), rgb(253, 108, 246));
     display: flex;
     align-items: center;
     justify-content: center;

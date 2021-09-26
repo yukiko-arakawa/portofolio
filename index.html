@@ -2,18 +2,26 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
+  <meta description="大阪でフリーランスのWeb制作をしています。
+  ご満足頂けるホームページができるように、
+  日々技術向上に心がけています。
+  
+  ご依頼・ご相談など、ぜひ一度お気軽に
+  ご連絡ください。">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="responcive.css">
-  <title>yukko_web</title>
+  <title> ホームページ作成　yukko_web</title>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+ 
 </head>
 
 <body>
   <section class="wrapper">
     <header>
       <div class="logo-wrapper" id="top">
-        <p>yukko_web
+        <p>yukko-web
        <img src="img/note-pc.jpeg" alt="パソコンのアイコン">
         </p>
         
@@ -30,23 +38,23 @@
       </ul>
     </nav>
 <!-- ハンバーガーメニュー -->
-    <input type="checkbox"  id="check">
-    <label for="check" class="menu-btn"><span></span></label>
-    
-    <div class="sp-nav">
-      <ul>
-          <li><a href="#profile">Profile</a></li>
-          <li><a href="#service">Service</a></li>
-          <li><a href="#works">Works</a></li>
-          <li><a href="#price">Price</a></li>
-          <li><a href="#contact">Contact</a></li>
-      </ul>
-    </div>
+<header class=sp-nav>
+  <button class="btn-menu">MENU</button>
+<nav class="sp">
+<ul id="close"　>
+  <li><a href="#profile">Profile</a></li>
+  <li><a href="#service">Service</a></li>
+  <li><a href="#works">Works</a></li>
+  <li><a href="#price">Price</a></li>
+  <li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+</header>
   <!-- ハンバーガーメニュー -->
 
   </header>
     <section class="top-img">
-       <img src="img/cookie-the-pom-gySMaocSdqs-unsplash.jpg" alt="メイン画像">
+       <img src="img/cookie-the-pom-gySMaocSdqs-unsplash.jpg" alt="TOP画像">
     </section>
  
     <section class="profile-wrapper">
@@ -111,7 +119,7 @@
       <a href="https://yukiko-arakawa.github.io/SHOP/" target="_blank"><img src="img/shop.png" alt="ショップの画像"></a>
      </div>
      <div class="works">
-      <a href=" https://yukiko-arakawa.github.io/CAFE/" target="_blank"><img src="img/CAFE.png"></a>
+      <a href=" https://yukiko-arakawa.github.io/CAFE/" target="_blank"><img src="img/CAFE.png" alt="カフェの画像"></a>
       <a href="https://yukiko-arakawa.github.io/Flower-Cafe/" target="_blank"><img  src="img/flower.png" alt="フラワーの画像"></a>
       <a href="#" target="_blank" class="pc"><img  src="img/macbook1697_TP_V.jpg" alt="パソコンの画像"></a>
       
@@ -202,6 +210,22 @@
   () => document.querySelector('#page-top')
   .classList.toggle('top-btn', window.scrollY > 250)
 )
+
+const btn = document.querySelector('.btn-menu');
+const nav = document.querySelector('.sp');
+ 
+btn.addEventListener('click', () => {
+  nav.classList.toggle('open-menu')
+  if (btn.innerHTML === 'MENU') {
+    btn.innerHTML = 'CLOSE';
+  } else {
+    btn.innerHTML = 'MENU';
+  }
+});
+
+$('#close a[href]').on('click', function(event) {
+  $('.btn-menu').trigger('click');
+});
   </script>
 
 </body>
