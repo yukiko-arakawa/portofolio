@@ -373,6 +373,15 @@ footer a img{
     margin-top: 25px;
     margin-left: -150px;
 }
+.copy{
+    text-align: center;
+    background-color: antiquewhite;
+    font-size: 18px;
+    height: 40px;
+    padding: 10px;
+    color: rgb(167, 86, 86);
+}
+
 .page-top {
     /* buttonタグのリセットCSS */
     border: none;
@@ -415,4 +424,63 @@ footer a img{
   .top-btn{
       opacity: 1;
   }
+ 
 
+
+/*下層のcss　music-salon*/
+.under-wrapper{
+    overflow: hidden;
+}
+header a{
+    margin-top: -70px;
+    margin-right: -130px;
+    text-decoration: none;
+    color: black;
+}
+header a:hover{
+    opacity: 0.5;
+}
+.title{
+  text-align: center;
+  
+}
+.title h1{
+text-decoration: underline;
+text-decoration-color: #BC0404;
+margin-top: 50px;
+margin-bottom: 30px;
+font-family:Helvetica ;
+font-size: 30px;
+}
+.music{
+ margin-top: 100px;
+ margin-bottom: 80px;
+ text-align: center;
+
+}
+.music img{
+    height: 960px;
+    border: solid 1px black;
+    margin: 0 auto;
+}
+.explain{
+    width: 760px;
+    margin: 0 auto 60px;
+   line-height: 1.5;
+}
+.explain div{
+    display: flex;
+}
+.explain p{
+    float: left;
+    margin-right: 100px;
+    margin-bottom: 20px;
+}
+.explain a{
+    text-decoration: none;
+    color: rgb(46, 191, 248);
+}
+.responcive{
+    margin-left: -18px;
+}
+/*music-salon*/
