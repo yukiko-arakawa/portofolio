@@ -39,6 +39,9 @@
 
 
 @media(max-width:520px){
+.pc{
+    display: none;
+  }
   .logo-wrapper{
     display: block;
   }
